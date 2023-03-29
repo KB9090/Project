@@ -8,7 +8,6 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './addproduct.component.html',
   styleUrls: ['./addproduct.component.css']
 })
-
 export class AddproductComponent implements OnInit
 {
 constructor(private service:ApiserviceService,  private router:ActivatedRoute) { }

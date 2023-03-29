@@ -8,9 +8,9 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './addcustomer.component.html',
   styleUrls: ['./addcustomer.component.css']
 })
-export class AddcustomerComponent implements OnInit {
-
-  constructor(private service:ApiserviceService,  private router:ActivatedRoute) { }
+export class AddcustomerComponent implements OnInit
+{
+constructor(private service:ApiserviceService,  private router:ActivatedRoute) { }
 
   errormsg:any;
   successmsg:any;
@@ -40,9 +40,6 @@ export class AddcustomerComponent implements OnInit {
     'cust_email':new FormControl('',Validators.required),
     'cust_phone':new FormControl('',Validators.required),
     'cust_addr':new FormControl('',Validators.required)
-
-
-
   });
 
   //to create a new customer
@@ -57,25 +54,23 @@ export class AddcustomerComponent implements OnInit {
 
     }
     else{
-      this.errormsg = 'Add customer Profile Unsuccessful';
+      this.errormsg = 'Add Customer Profile Unsuccessful';
     }
 
   }
+
+
 //to update a customer
-customerUpdate()
-{
+customerUpdate(){
   console.log(this.customerForm.value,'updatedform');
 
-  if(this.customerForm.valid)
-  {
+  if(this.customerForm.valid) {
     this.service.updatecustomer(this.customerForm.value,this.getparamid).subscribe((res)=>{
       console.log(res,'resupdated');
       this.successmsg = res.message;
-
     })
   }
-  else
-  {
+  else{
     this.errormsg = 'invalid';
   }
 }

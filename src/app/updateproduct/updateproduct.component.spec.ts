@@ -11,7 +11,9 @@ describe('UpdateproductComponent', () => {
       declarations: [ UpdateproductComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(UpdateproductComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

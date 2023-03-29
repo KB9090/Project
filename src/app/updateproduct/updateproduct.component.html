@@ -1,1 +1,40 @@
-<p>updateproduct works!</p>
+<div id="outPopUp" class="">
+  <div class="">
+
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!--to show success alert-->
+        <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{successmsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  <br><br>
+      <div align="center">
+  <br><br>
+        <form  [formGroup]="productForm" >
+        <br>
+          <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control" formControlName="food_name" placeholder="Food Name">
+          </div>
+        <br>
+          <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control"  formControlName="food_price" placeholder="Food Price">
+          </div>
+        <br>
+          <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control"  formControlName="food_img" placeholder="Food Description">
+          </div>
+        <br>
+          <div  align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="productUpdate()">
+          <button >Confirm Update 🧑‍🎓</button>
+          <br><br>
+          <button class="nav-item" [routerLink]="['/viewproduct']">Cancel</button>
+          </div>
+        </form>
+      </div>
+  </div>
+  <br><br><br><br><br>

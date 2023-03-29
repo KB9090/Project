@@ -10,6 +10,8 @@
   }
 </style>
 
+
+<div id="outPopUp" class="">
 <div class="">
 
   <!--to show error alert-->
@@ -28,26 +30,30 @@
     <form  [formGroup]="customerForm" >
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control" formControlName="cust_name" placeholder="Name">
+      <input type="text" class="form-control" formControlName="cust_name" placeholder="Customer Name">
       </div>
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control"  formControlName="cust_email" placeholder="Email">
+      <input type="text" class="form-control"  formControlName="cust_email" placeholder="Customer Email">
       </div>
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control"  formControlName="cust_phone" placeholder="Phone Number">
+      <input type="text" class="form-control"  formControlName="cust_phone" placeholder="Customer Phone Number">
       </div>
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control"  formControlName="cust_addr" placeholder="Address">
+      <input type="text" class="form-control"  formControlName="cust_addr" placeholder="Customer Address">
       </div>
-    <br>
+      <br>
       <div align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="customerSubmit()">
       <button>Add Customer</button>
       </div>
     </form>
-<br>
-<button class="nav-item" [routerLink]="['/viewcustomer']"> View Customer</button>
+    <br>
+    <button class="nav-item" [routerLink]="['/viewcustomer']"> View Customers</button>
+  </div>
+
 
 </div>
+</div>
+<br><br><br><br><br><br>

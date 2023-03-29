@@ -27,27 +27,30 @@
   </div>
         <br><br>
   <div align="center">
-    <form  [formGroup]="productForm" enctype="multipart/form-data">
+    <form  [formGroup]="productForm" >
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control" formControlName="food_name" placeholder="Name">
+      <input type="text" class="form-control" formControlName="food_name" placeholder="Food Name">
       </div>
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="text" class="form-control"  formControlName="food_price" placeholder="Price">
+      <input type="text" class="form-control"  formControlName="food_price" placeholder="Food Price">
       </div>
     <br>
       <div class="col-lg-4 mx-auto">
-      <input type="file" class="form-control" formControlName="food_img">
+      <input type="text" class="form-control"  formControlName="food_img" placeholder="Food Description">
       </div>
     <br>
-
       <div align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="productSubmit()">
       <button>Add Product</button>
       </div>
     </form>
 
+    <br>
+    <button class="nav-item" [routerLink]="['/viewproduct']"> View Products</button>
   </div>
 
 
 </div>
+</div>
+<br><br><br><br><br><br>

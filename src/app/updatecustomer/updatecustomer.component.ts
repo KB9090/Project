@@ -12,12 +12,11 @@ import { ActivatedRoute} from '@angular/router';
 export class UpdatecustomerComponent implements OnInit {
 
   customerForm = new FormGroup({
-    'customerID':new FormControl('',Validators.required),
-    'customerName':new FormControl('',Validators.required),
-    'customerEmail':new FormControl('',Validators.required),
-    'customerPhone':new FormControl('',Validators.required),
-    'customerIntake':new FormControl('',Validators.required)
-
+    'id':new FormControl('',Validators.required),
+    'cust_name':new FormControl('',Validators.required),
+    'cust_email':new FormControl('',Validators.required),
+    'cust_phone':new FormControl('',Validators.required),
+    'cust_addr':new FormControl('',Validators.required)
 
   });
 
@@ -33,13 +32,12 @@ export class UpdatecustomerComponent implements OnInit {
       this.service.getOnecustomer(this.router.snapshot.params['id']).subscribe((res:any)=>{
         console.log(res,'res==>');
         this.customerForm.patchValue({
-          customerID:res.data[0].customerID,
-            customerName:res.data[0].customerName,
-            customerEmail:res.data[0].customerEmail,
-            customerPhone:res.data[0].customerPhone,
-            customerIntake:res.data[0].customerIntake
-
-        });
+            id:res.data[0].id,
+            cust_name:res.data[0].cust_name,
+            cust_email:res.data[0].cust_email,
+            cust_phone:res.data[0].cust_phone,
+            cust_addr:res.data[0].cust_addr
+           });
       });
   }
 //to update a customer
