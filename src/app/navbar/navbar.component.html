@@ -1,44 +1,33 @@
 <html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+h1   {text-align:center; font-family: Arial, sans-serif; font-size: 250%; font-weight: bold;}
+body {text-align:center; font-family: Arial, sans-serif; font-size: 250%; font-weight: bold;}
 
 .navbar {
   width: 100%;
-  background-color: #0e0e0e;
-  overflow: auto;
-}
+  background-color: #cecece;
+  overflow: auto;}
 
 .navbar a {
   float: left;
   padding: 22px;
-  color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 17px;
-}
+  font-size: 17px;}
 
 .navbar a:hover {
-  background-color: rgba(73, 73, 73, 0.473);
-}
+  background-color: rgba(58, 58, 58, 0.473); }
 
-.active {
-  background-color: rgba(73, 73, 73, 0.473);
-}
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
 </style>
 
 <body>
 <div class="navbar">
 
-  <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">Learn More</a>
-  <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" width= "200" height= "60" alt="Spotify"></a>
-  <a class="nav-link" [routerLink]="['/search']" routerLinkActive="router-link-active"><i class="fa fa-fw fa-search"></i> Search</a>
+  <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active">About</a>
+  <a class="nav-link" [routerLink]="['/addcustomer']" routerLinkActive="router-link-active">Customer</a>
+  <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active"><img src="/assets/logo.png" width="80px" height= "80px" alt="Spotify"></a>
+  <a class="nav-link" [routerLink]="['/addproduct']" routerLinkActive="router-link-active">Product</a>
+  <a class="nav-link" [routerLink]="['/faq']" routerLinkActive="router-link-active">FAQ</a>
 
 </div>
 </body>

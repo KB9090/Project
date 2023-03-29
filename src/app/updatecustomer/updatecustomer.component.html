@@ -1,0 +1,48 @@
+<div id="outPopUp" class="">
+  <div class="">
+
+      <!--to show error alert-->
+      <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+        <!--to show success alert-->
+        <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{successmsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+<br><br>
+        <div align="center">
+          <img  src="/assets/addcustomer.png" style="height: 100px;">
+          <br><br>
+      <form  [formGroup]="customerForm" >
+        <div class="col-lg-4 mx-auto" >
+          <input type="text" class="form-control" formControlName="customerID" placeholder="customer ID">
+        </div>
+        <br>
+        <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control" formControlName="customerName" placeholder="customer Name">
+        </div>
+        <br>
+        <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control"  formControlName="customerEmail" placeholder="customer Email">
+        </div>
+        <br>
+        <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control"  formControlName="customerPhone" placeholder="customer Phone Number">
+        </div>
+        <br>
+        <div class="col-lg-4 mx-auto">
+          <input type="text" class="form-control"  formControlName="customerIntake" placeholder="customer Intake">
+        </div>
+        <br>
+
+        <div  align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="customerUpdate()">
+          <button >Confirm Update🧑‍🎓</button>
+      </div>
+
+      </form>
+
+    </div>
+  </div>

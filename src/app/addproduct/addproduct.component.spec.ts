@@ -1,17 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SearchComponent } from './search.component';
 
-describe('SearchComponent', () => {
-  let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
+import { AddproductComponent } from './addproduct.component';
+
+describe('AddproductComponent', () => {
+  let component: AddproductComponent;
+  let fixture: ComponentFixture<AddproductComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
+      declarations: [ AddproductComponent ]
     })
     .compileComponents();
+  });
 
-    fixture = TestBed.createComponent(SearchComponent);
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AddproductComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,5 +23,4 @@ describe('SearchComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
 
